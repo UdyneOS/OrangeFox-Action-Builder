@@ -12,10 +12,10 @@ on:
       MANIFEST_BRANCH:
         description: 'OrangeFox Manifest Branch'
         required: true
-        default: '10.0'
+        default: '11.0'
         type: choice
         options:
-        - 10.0
+        - 12.1
         - 11.0
       DEVICE_TREE:
         description: 'OrangeFox Device Tree'
@@ -24,15 +24,15 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'OrangeFox Device Tree Branch'
         required: true
-        default: 'android-10.0'
+        default: 'android-11.0'
       DEVICE_PATH:
         description: 'Specify your Device Path'
         required: true
-        default: 'device/realme/bengal'
+        default: 'device/realme/RMX2195'
       DEVICE_NAME:
         description: 'Specify your Device Codename'
         required: true
-        default: 'bengal'
+        default: 'RMX2195'
       BUILD_TARGET:
         description: 'Specify your Build Target'
         required: true
@@ -72,7 +72,7 @@ jobs:
         sudo bash setup/android_build_env.sh
       
     - name: Set-up Manifest
-      if: github.event.inputs.MANIFEST_BRANCH == '10.0' || github.event.inputs.MANIFEST_BRANCH == '11.0'
+      if: github.event.inputs.MANIFEST_BRANCH == '11.0' || github.event.inputs.MANIFEST_BRANCH == '12.1'
       run: |
         mkdir -p ${GITHUB_WORKSPACE}/OrangeFox
         cd ${GITHUB_WORKSPACE}/OrangeFox
