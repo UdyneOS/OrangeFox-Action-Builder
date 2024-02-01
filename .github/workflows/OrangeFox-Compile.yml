@@ -12,10 +12,10 @@ on:
       MANIFEST_BRANCH:
         description: 'OrangeFox Manifest Branch'
         required: true
-        default: '12.1'
+        default: '10.0'
         type: choice
         options:
-        - 12.1
+        - 10.0
         - 11.0
       DEVICE_TREE:
         description: 'OrangeFox Device Tree'
